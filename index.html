@@ -10,25 +10,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Base styles for mobile */
-body {
-  font-size: 16px;
-}
-
-/* Tablet styles (min-width: 768px) */
-@media (min-width: 768px) {
-  body {
-    font-size: 18px;
-  }
-}
-
-/* Desktop styles (min-width: 1024px) */
-@media (min-width: 1024px) {
-  body {
-    font-size: 20px;
-  }
-}
-
 
 .quiz-box {
   background: #ffffff;
@@ -185,28 +166,36 @@ body {
       padding: 15px;
       margin-top: 40px;
     }
-* {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoWise</title>
+  <style>
+
+    
+    * {
       box-sizing: border-box;
-      margin: 0;
-      padding: 0;
     }
 
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
       background-color: #f0fff0;
-      color: #333;
+      color: #2f2f2f;
     }
 
     header {
       background-color: #40916c;
       color: white;
-      padding: 20px 10px;
       text-align: center;
+      padding: 20px 15px;
     }
 
     header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 5px;
+      font-size: 2.2rem;
+      margin-bottom: 8px;
     }
 
     header p {
@@ -218,33 +207,36 @@ body {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
+      gap: 20px;
       padding: 10px;
     }
 
     nav a {
-      margin: 10px 15px;
       text-decoration: none;
       color: #2f6627;
       font-weight: bold;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
 
     .main-content {
-      max-width: 1000px;
+      max-width: 960px;
       margin: 0 auto;
-      padding: 30px 15px;
+      padding: 40px 20px;
       text-align: center;
     }
 
     .main-content h2 {
       font-size: 2rem;
-      margin-bottom: 15px;
       color: #2d6a4f;
+      margin-bottom: 15px;
     }
 
     .main-content p {
       font-size: 1.1rem;
       margin-bottom: 30px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .button-group {
@@ -256,13 +248,13 @@ body {
 
     .button-group button {
       background-color: #52b788;
-      border: none;
       color: white;
-      padding: 15px 25px;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 6px;
       font-size: 1rem;
-      border-radius: 5px;
       cursor: pointer;
-      transition: background-color 0.3s;
+      transition: background 0.3s;
     }
 
     .button-group button:hover {
@@ -270,15 +262,19 @@ body {
     }
 
     /* Responsive Design */
-
     @media (max-width: 768px) {
       header h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+      }
+
+      nav {
+        gap: 10px;
+        flex-direction: column;
+        align-items: center;
       }
 
       nav a {
         font-size: 1rem;
-        margin: 8px;
       }
 
       .main-content h2 {
@@ -287,32 +283,36 @@ body {
 
       .main-content p {
         font-size: 1rem;
+        padding: 0 10px;
       }
 
       .button-group {
         flex-direction: column;
-        gap: 10px;
+        gap: 12px;
       }
 
       .button-group button {
-        width: 100%;
+        width: 90%;
         max-width: 300px;
         margin: 0 auto;
       }
     }
 
     @media (max-width: 480px) {
-      nav {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      nav a {
-        margin: 5px 0;
+      header h1 {
+        font-size: 1.5rem;
       }
 
       header p {
         font-size: 0.9rem;
+      }
+
+      nav a {
+        font-size: 0.95rem;
+      }
+
+      .main-content p {
+        font-size: 0.95rem;
       }
     }
    
