@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>EcoWise - Empowering You to Conserve Energy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Base styles for mobile */
+body {
+  font-size: 16px;
+}
+
+/* Tablet styles (min-width: 768px) */
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+/* Desktop styles (min-width: 1024px) */
+@media (min-width: 1024px) {
+  body {
+    font-size: 20px;
+  }
+}
+
+
+.quiz-box {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 128, 0, 0.1);
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  font-size: 18px;
+  color: #2e7d32;
+}
+
+.quiz-box h2 {
+  margin-bottom: 20px;
+  font-size: 26px;
+  color: #2e7d32;
+}
+
+.question {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.quiz-box label {
+  display: block;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.quiz-box input[type="radio"] {
+  margin-right: 10px;
+}
+
+.submit-btn {
+  background-color: #4caf50;
+  color: white;
+  font-size: 16px;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #388e3c;
+}
+
+.result {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.score {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f6fff8;
+      color: #2e7d32;
+    }
+
+    header {
+      background-color: #43a047;
+      padding: 25px;
+      text-align: center;
+      color: white;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      margin-top: 10px;
+    }
+
+    nav {
+      background-color: #c8e6c9;
+      display: flex;
+      justify-content: center;
+      padding: 12px 10px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      margin: 10px 15px;
+      text-decoration: none;
+      color: #2e7d32;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      color: #1b5e20;
+    }
+
+    .hero {
+      padding: 60px 20px;
+      text-align: center;
+      background: linear-gradient(to right, #e8f5e9, #f1f8e9);
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      background-color: #66bb6a;
+      color: white;
+      padding: 15px 25px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #388e3c;
+    }
+
+    footer {
+      background-color: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      .hero h2 {
+        font-size: 1.6rem;
+      }
+
+      .btn {
+        padding: 12px 20px;
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🌱 EcoWise</h1>
+    <p>Empowering You to Conserve Energy — at Home, School, and Work</p>
+  </header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#tips">Energy Tips</a>
+  <a href="#calculator">Calculator</a>
+  <a href="#quiz">Quiz</a>
+  <a href="#about">About Me</a>
+</nav>
+
+
+  <section class="hero" id="home">
+    <h2>Welcome to EcoWise 🌍</h2>
+    <p>Every small step matters! Explore how you can make smarter energy choices in your daily life and join us in building a sustainable, energy-wise future.</p>
+    
+  <div class="btn-container">
+  <a href="#tips" class="btn">Energy Tips</a> 
+  <a href="#calculator" class="btn">Use Energy Calculator</a>
+  <a href="#quiz" class="btn">Quiz</a>
+  <a href="#about" class="btn">About Me</a>
+
+</div>
+</section>
+
+
+<!-- ENERGY TIPS  -->
+<section id="tips" style="padding: 60px 20px; background: #f0fff0;">
+
+  <h1 style="text-align:center; color: #2e7d32;">🌍 Energy Saving Tips</h1>
+  <p style="text-align:center; max-width: 800px; margin: 10px auto 40px; font-size: 1.1rem;">
+    Saving energy isn't just about reducing bills — it's about protecting the planet and improving quality of life. Learn how your small choices can lead to big changes! 💚
+  </p>
+
+<!-- WHY ENERGY SAVING IS IMPORTANT -->
+  <div style="background:#fff; padding: 25px; border-radius:10px; margin-bottom: 40px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+    <h3>🌱 Why is Saving Energy Important?</h3>
+    <ul style="line-height: 1.7;">
+      <li>🌍 Reduces carbon footprint and combats climate change.</li>
+      <li>💰 Lowers electricity bills and operating costs.</li>
+      <li>⚡ Preserves natural resources and reduces grid demand.</li>
+      <li>🏡 Improves indoor comfort and appliance lifespan.</li>
+      <li>🌟 Encourages sustainable habits for future generations.</li>
+    </ul>
+  </div>
+
+  
+
+<!-- Causes of High Energy Consumption -->
+  <div style="background:#fff; padding: 30px; border-radius:10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 40px;">
+    <h2 style="color: #2e7d32;">⚠️ Causes of High Energy Consumption</h2>
+    <ul style="line-height: 1.7;">
+      <li>❌ Leaving lights, fans, and appliances on when not in use.</li>
+      <li>❌ Using outdated, inefficient appliances.</li>
+      <li>❌ Overusing heating or cooling systems without insulation.</li>
+      <li>❌ Poor maintenance of air conditioners and refrigerators.</li>
+      <li>❌ Keeping devices on standby instead of unplugging them.</li>
+      <li>❌ Relying on incandescent or CFL bulbs instead of LEDs.</li>
+      <li>❌ Running heavy appliances during peak hours.</li>
+      <li>❌ Poor ventilation or poorly designed living/work spaces.</li>
+      <li>❌ Overuse of electric water heaters without regulation.</li>
+      <li>❌ Lack of awareness about energy-saving practices.</li>
+    </ul>
+  </div>
+
+
+<!-- Advantages of Saving Energy -->
+  <div style="background:#fff; padding: 30px; border-radius:10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 40px;">
+    <h2 style="color: #2e7d32;">✅ Advantages of Saving Energy</h2>
+    <ul style="line-height: 1.7;">
+      <li>💸 Reduces monthly electricity bills and cuts down costs.</li>
+      <li>🌳 Minimizes environmental impact through fewer emissions.</li>
+      <li>🔋 Increases efficiency and extends appliance lifespan.</li>
+      <li>🏡 Improves comfort with stable indoor temperatures.</li>
+      <li>⚡ Reduces stress on the electricity grid.</li>
+      <li>🌞 Encourages adoption of renewable sources like solar.</li>
+      <li>🤝 Promotes responsible and sustainable habits.</li>
+      <li>🛠️ Reduces need for frequent maintenance and repairs.</li>
+      <li>🏆 Contributes to national energy independence.</li>
+      <li>🌍 Helps preserve resources for future generations.</li>
+    </ul>
+  </div>
+
+<!-- Real-Life Examples -->
+<div style="margin-bottom: 60px;">
+  <h2 style="color: #2e7d32; text-align: left; margin-left: 30px;">📖 Real-Life Examples of Energy Saving</h2>
+
+
+<!-- Grid Container -->
+  <div style="display: flex; flex-direction: column; align-items: center; gap: 30px;">
+
+<!-- Row 1: 3 Cards -->
+    <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+      <div style="background:#fff; padding:20px; border-radius:10px; width: 300px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align:center;">
+        <h3>🏢 Office in Pune</h3>
+        <p>Switched from CFLs to LEDs across all floors, saving ₹15,000/month and improving energy efficiency.</p>
+      </div>
+
+      <div style="background:#fff; padding:20px; border-radius:10px; width: 300px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align:center;">
+        <h3>👨‍👩‍👧‍👦 Family in Delhi</h3>
+        <p>Installed a solar water heater, reducing winter energy use by 60% and cutting costs significantly.</p>
+      </div>
+
+      <div style="background:#fff; padding:20px; border-radius:10px; width: 300px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align:center;">
+        <h3>🏠 Homeowner in Bengaluru</h3>
+        <p>Added roof and wall insulation, reducing air conditioning use by 40% in summer months.</p>
+      </div>
+    </div>
+
+
+<!-- Row 2: 2 Centered Cards -->
+    <div style="display: flex; gap: 20px; justify-content: center;">
+      <div style="background:#fff; padding:20px; border-radius:10px; width: 300px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align:center;">
+        <h3>🏫 School in Kerala</h3>
+        <p>Student-led initiative turned off unused fans/lights during breaks, saving ₹10,000 annually.</p>
+      </div>
+
+      <div style="background:#fff; padding:20px; border-radius:10px; width: 300px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align:center;">
+        <h3>🏬 Retail Shop in Hyderabad</h3>
+        <p>Installed motion-sensor lighting and reduced lighting electricity costs by 50%.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- What We as Citizens Can Do -->
+  <div style="background:#fff; padding: 30px; border-radius:10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+    <h2 style="color: #2e7d32;">🙌 What We as Citizens Can Do</h2>
+    <ul style="line-height: 1.7;">
+      <li>💡 Replace old bulbs with energy-saving LED lights.</li>
+      <li>🌬️ Use ceiling fans and maintain moderate AC settings (e.g. 26°C).</li>
+      <li>🔌 Unplug devices when not in use to avoid standby power loss.</li>
+      <li>☀️ Consider solar panels or solar water heating for homes.</li>
+      <li>🏠 Insulate your home to reduce need for heating/cooling.</li>
+      <li>🧺 Wash clothes in cold water and air dry them.</li>
+      <li>📅 Run heavy appliances during off-peak electricity hours.</li>
+      <li>📢 Educate your family and neighbors about saving energy.</li>
+      <li>🛠️ Maintain ACs, refrigerators, and other devices regularly.</li>
+      <li>🌱 Support green policies, eco campaigns, and community action.</li>
+    </ul>
+  </div>
+
+</section>
+
+
+<!--CALCULATOR-->
+<section id="calculator" style="padding: 60px 20px; background-color: #f0fff0;">
+  <h2 style="text-align: center; color: #2e7d32;">🔢 EcoWise Energy Calculator</h2>
+  <p style="text-align: center; max-width: 700px; margin: 10px auto 30px; font-size: 1.1rem;">
+    Estimate your daily energy usage and discover how to reduce it using smart, simple strategies. Enter your average usage below:
+  </p>
+
+  <div style="max-width: 700px; margin: auto; background: #e8f5e9; padding: 25px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.05);">
+    <form id="energyForm">
+      <label>💡 Light Usage (hrs/day):</label>
+      <input type="number" id="lightHours" min="0" max="24" step="0.5" required><br><br>
+
+      <label>🌬️ Fan Usage (hrs/day):</label>
+      <input type="number" id="fanHours" min="0" max="24" step="0.5" required><br><br>
+
+      <label>❄️ AC Usage (hrs/day):</label>
+      <input type="number" id="acHours" min="0" max="24" step="0.5" required><br><br>
+
+      <label>🧊 Refrigerator On?</label>
+      <select id="fridgeOn" required>
+        <option value="yes">Yes (Always On)</option>
+        <option value="no">No</option>
+      </select><br><br>
+
+      <label>💻 Computer/Laptop Usage (hrs/day):</label>
+      <input type="number" id="pcHours" min="0" max="24" step="0.5" required><br><br>
+
+      <label>📺 TV Usage (hrs/day):</label>
+      <input type="number" id="tvHours" min="0" max="24" step="0.5"><br><br>
+
+      <label>🧺 Washing Machine (uses/day):</label>
+      <input type="number" id="washCount" min="0" step="1"><br><br>
+
+      <label>🔥 Water Heater (hrs/day):</label>
+      <input type="number" id="heaterHours" min="0" max="24" step="0.5"><br><br>
+
+      <label>👕 Iron (hrs/day):</label>
+      <input type="number" id="ironHours" min="0" max="24" step="0.5"><br><br>
+
+      <label>🧹 Vacuum Cleaner (hrs/day):</label>
+      <input type="number" id="vacuumHours" min="0" max="24" step="0.5"><br><br>
+
+      <label>🎮 Gaming Console (hrs/day):</label>
+      <input type="number" id="gameHours" min="0" max="24" step="0.5"><br><br>
+
+      <label>☕ Electric Kettle (mins/day):</label>
+      <input type="number" id="kettleMinutes" min="0" max="1440" step="1"><br><br>
+
+      <label>🔥 Oven (mins/day):</label>
+      <input type="number" id="ovenMinutes" min="0" max="1440" step="1"><br><br>
+
+      <label>🍽️ Microwave (mins/day):</label>
+      <input type="number" id="microMinutes" min="0" max="1440" step="1"><br><br>
+
+      <label>🌀 Clothes Dryer (hrs/day):</label>
+      <input type="number" id="dryerHours" min="0" max="24" step="0.5"><br><br>
+
+      <label>🔋 Inverter/UPS (hrs/day):</label>
+      <input type="number" id="upsHours" min="0" max="24" step="0.5"><br><br>
+
+      <button type="submit" style="margin-top: 20px; padding: 10px 20px; background-color: #388e3c; color: white; border: none; border-radius: 5px;">Calculate</button>
+    </form>
+  </div>
+
+  <div id="resultSection" style="display:none; max-width: 900px; margin: 40px auto 0; background: #dcedc8; padding: 25px; border-radius: 10px;">
+    <h3 style="text-align:center;">🌟 Your Energy Use, Cost & Saving Tips</h3>
+    <p id="energyOutput" style="font-size: 1.1rem;"></p>
+    <div id="costBreakdown" style="margin-top: 20px; overflow-x: auto;"></div>
+    <div id="suggestions" style="margin-top: 30px;"></div>
+  </div>
+</section>
+
+<script>
+  const form = document.getElementById('energyForm');
+  const output = document.getElementById('energyOutput');
+  const suggestions = document.getElementById('suggestions');
+  const resultSection = document.getElementById('resultSection');
+  const costBreakdown = document.getElementById('costBreakdown');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const costPerKWh = 9; // ₹ per unit
+    const getVal = id => parseFloat(document.getElementById(id).value) || 0;
+
+    const appliances = {
+      "Lights": { watts: 10, hours: getVal('lightHours') },
+      "Fans": { watts: 75, hours: getVal('fanHours') },
+      "AC": { watts: 1000, hours: getVal('acHours') },
+      "Computer": { watts: 100, hours: getVal('pcHours') },
+      "Fridge": { watts: 150, hours: document.getElementById('fridgeOn').value === 'yes' ? 24 : 0 },
+      "TV": { watts: 120, hours: getVal('tvHours') },
+      "Washing Machine": { watts: 500, hours: getVal('washCount') * 0.5 },
+      "Water Heater": { watts: 2000, hours: getVal('heaterHours') },
+      "Microwave": { watts: 1000, hours: getVal('microMinutes') / 60 },
+      "Iron": { watts: 1200, hours: getVal('ironHours') },
+      "Vacuum Cleaner": { watts: 1400, hours: getVal('vacuumHours') },
+      "Gaming Console": { watts: 150, hours: getVal('gameHours') },
+      "Electric Kettle": { watts: 1800, hours: getVal('kettleMinutes') / 60 },
+      "Oven": { watts: 2200, hours: getVal('ovenMinutes') / 60 },
+      "Clothes Dryer": { watts: 3000, hours: getVal('dryerHours') },
+      "UPS/Inverter": { watts: 500, hours: getVal('upsHours') }
+    };
+
+    let totalKWh = 0, totalCost = 0;
+    let tips = "<h4>💡 Energy-Saving Tips:</h4><ul>";
+
+    let tableHTML = `
+      <table style="width:100%; border-collapse: collapse; text-align:center;">
+        <tr style="background-color:#c5e1a5;">
+          <th style="padding:8px; border:1px solid #a5d6a7;">Appliance</th>
+          <th style="padding:8px; border:1px solid #a5d6a7;">kWh/day</th>
+          <th style="padding:8px; border:1px solid #a5d6a7;">Cost/day (₹)</th>
+          <th style="padding:8px; border:1px solid #a5d6a7;">Cost/month (₹)</th>
+          <th style="padding:8px; border:1px solid #a5d6a7;">Cost/year (₹)</th>
+        </tr>
+    `;
+
+    for (const [name, { watts, hours }] of Object.entries(appliances)) {
+      const energy = (watts * hours) / 1000;
+      const costDay = +(energy * costPerKWh).toFixed(2);
+      const costMonth = +(costDay * 30).toFixed(2);
+      const costYear = +(costDay * 365).toFixed(2);
+
+      if (energy > 0) {
+        totalKWh += energy;
+        totalCost += costDay;
+        tableHTML += `
+          <tr>
+            <td style="padding:6px; border:1px solid #a5d6a7;">${name}</td>
+            <td style="padding:6px; border:1px solid #a5d6a7;">${energy.toFixed(2)}</td>
+            <td style="padding:6px; border:1px solid #a5d6a7;">₹${costDay}</td>
+            <td style="padding:6px; border:1px solid #a5d6a7;">₹${costMonth}</td>
+            <td style="padding:6px; border:1px solid #a5d6a7;">₹${costYear}</td>
+          </tr>`;
+
+        // Energy tips
+        if (name === 'Lights' && hours > 5) tips += `<li>💡 Switch to LED & use natural light — save ₹${(2*10*9/1000).toFixed(2)}/day</li>`;
+        if (name === 'Fans' && hours > 8) tips += `<li>🌬️ Use energy-efficient fans — save ₹${(2*75*9/1000).toFixed(2)}/day</li>`;
+        if (name === 'AC' && hours > 4) tips += `<li>❄️ Set AC to 26°C, clean filters — save ₹${(1*1000*9/1000).toFixed(2)}/day</li>`;
+        if (name === 'Water Heater' && hours > 0.5) tips += `<li>🔥 Heat water only when needed — save ₹${(0.5*2000*9/1000).toFixed(2)}/day</li>`;
+        if (name === 'Iron' && hours > 0.5) tips += `<li>👕 Iron in bulk, avoid standby — save ₹${(0.5*1200*9/1000).toFixed(2)}/day</li>`;
+        if (name === 'Clothes Dryer' && hours > 0.5) tips += `<li>🌀 Sun-dry clothes often — save ₹${(1*3000*9/1000).toFixed(2)}/day</li>`;
+        if (name === 'Microwave' && hours > 0.5) tips += `<li>🍽️ Batch heat meals — save ₹${(0.5*1000*9/1000).toFixed(2)}/day</li>`;
+        if (name === 'Fridge') tips += `<li>🧊 Defrost weekly, keep fridge 70% full — save ₹3/day</li>`;
+        if (name === 'UPS/Inverter' && hours > 0.5) tips += `<li>🔋 Use energy-efficient appliances to reduce UPS load</li>`;
+      }
+    }
+
+    tableHTML += `
+      <tr style="background:#f0f4c3;">
+        <td><strong>Total</strong></td>
+        <td><strong>${totalKWh.toFixed(2)}</strong></td>
+        <td><strong>₹${totalCost.toFixed(2)}</strong></td>
+        <td><strong>₹${(totalCost*30).toFixed(2)}</strong></td>
+        <td><strong>₹${(totalCost*365).toFixed(2)}</strong></td>
+      </tr>
+    </table>`;
+
+    output.innerHTML = `🔌 <strong>${totalKWh.toFixed(2)} kWh</strong> per day<br>💰 Estimated Cost: <strong>₹${totalCost.toFixed(2)}/day</strong>`;
+    costBreakdown.innerHTML = tableHTML;
+    tips += "</ul>";
+    suggestions.innerHTML = tips;
+
+    resultSection.style.display = "block";
+    resultSection.scrollIntoView({ behavior: "smooth" });
+  });
+</script>
+
+
+
+
+
+<!-- QUIZ -->
+
+<h1 style="text-align: center; font-size: 28px; color: #2e7d32; margin-top: 40px;">What knowledge did you acquire?</h1>
+
+<section id="quiz">
+  <div class="quiz-box" style="background-color: #f0fff4; padding: 30px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.05); max-width: 700px; margin: 20px auto;">
+    <div id="quiz-content"></div>
+    <button class="submit-btn" onclick="submitAnswer()" style="margin-top: 20px; padding: 10px 20px; background-color: #43a047; color: white; border: none; border-radius: 5px; cursor: pointer;">Submit Answer</button>
+    <div class="result" id="quiz-result" style="margin-top: 15px;"></div>
+    <div class="score" id="quiz-score" style="margin-top: 15px; font-weight: bold;"></div>
+  </div>
+</section>
+
+<!-- Final message shown after quiz -->
+<h1 id="final-quote" style="display: none; text-align: center; font-size: 26px; font-weight: bold; color: #065f46; margin-top: 30px;">
+  Every watt counts — start counting yours.
+</h1>
+
+<script>
+const quizData = [
+  {
+    question: "Which type of light bulb uses the least energy?",
+    options: ["Incandescent", "LED", "Halogen", "CFL"],
+    answer: "LED",
+    explanation: "LED lights use up to 80% less energy than traditional incandescent bulbs."
+  },
+  {
+    question: "At what temperature is it recommended to set your AC for energy efficiency?",
+    options: ["18°C", "22°C", "26°C", "30°C"],
+    answer: "26°C",
+    explanation: "Setting your AC to 26°C helps save energy while keeping you comfortable."
+  },
+  {
+    question: "Which practice saves the most energy?",
+    options: ["Leaving devices plugged in", "Using solar power", "Running laundry with hot water", "Keeping lights on all day"],
+    answer: "Using solar power",
+    explanation: "Solar power uses renewable energy, drastically reducing electricity consumption."
+  },
+  {
+    question: "What is the most energy-efficient way to dry clothes?",
+    options: ["Using a dryer", "Line drying in sunlight", "Drying indoors", "Using a heater"],
+    answer: "Line drying in sunlight",
+    explanation: "Line drying uses no electricity and relies on natural sunlight and wind."
+  },
+  {
+    question: "Which appliance uses the most energy in an average household?",
+    options: ["Refrigerator", "TV", "Microwave", "Laptop"],
+    answer: "Refrigerator",
+    explanation: "The refrigerator runs 24/7 and consumes significant energy compared to other devices."
+  },
+  {
+    question: "How much energy can be saved by turning off lights when not in use?",
+    options: ["5%", "10%", "15%", "20%"],
+    answer: "10%",
+    explanation: "Turning off lights can save around 10% of your energy bill, depending on usage."
+  },
+  {
+    question: "Which of these is NOT a renewable energy source?",
+    options: ["Solar", "Wind", "Coal", "Hydro"],
+    answer: "Coal",
+    explanation: "Coal is a fossil fuel and non-renewable."
+  },
+  {
+    question: "What should you do to save energy when leaving a room?",
+    options: ["Turn off lights and appliances", "Leave devices on standby", "Open windows and keep AC on", "None of the above"],
+    answer: "Turn off lights and appliances",
+    explanation: "Turning off unused devices helps reduce unnecessary energy consumption."
+  }
+];
+
+let currentQuestionIndex = 0;
+let score = 0;
+
+function loadQuestion() {
+  const quizDiv = document.getElementById('quiz-content');
+  quizDiv.innerHTML = '';
+  const q = quizData[currentQuestionIndex];
+
+  const questionEl = document.createElement('div');
+  questionEl.className = 'question';
+  questionEl.textContent = `Q${currentQuestionIndex + 1}: ${q.question}`;
+  questionEl.style.fontWeight = "bold";
+  questionEl.style.marginBottom = "10px";
+  quizDiv.appendChild(questionEl);
+
+  q.options.forEach((option, i) => {
+    const label = document.createElement('label');
+    label.style.display = "block";
+    label.style.marginBottom = "8px";
+
+    const input = document.createElement('input');
+    input.type = 'radio';
+    input.name = 'answer';
+    input.value = option;
+    input.id = `option${i}`;
+    input.required = true;
+
+    label.appendChild(input);
+    label.appendChild(document.createTextNode(" " + option));
+    quizDiv.appendChild(label);
+  });
+
+  document.getElementById('quiz-result').textContent = '';
+}
+
+function submitAnswer() {
+  const selected = document.querySelector('input[name="answer"]:checked');
+  const result = document.getElementById('quiz-result');
+  const scoreEl = document.getElementById('quiz-score');
+
+  if (!selected) {
+    alert('Please select an answer!');
+    return;
+  }
+
+  const answer = selected.value;
+  const correctAnswer = quizData[currentQuestionIndex].answer;
+  const explanation = quizData[currentQuestionIndex].explanation;
+
+  if (answer === correctAnswer) {
+    result.innerHTML = `<span style="color:green;">Correct! 🎉 <strong>${explanation}</strong></span>`;
+    score++;
+  } else {
+    result.innerHTML = `<span style="color:red;">Wrong! ❌ The correct answer is <strong>${correctAnswer}</strong>. ${explanation}</span>`;
+  }
+
+  currentQuestionIndex++;
+
+  if (currentQuestionIndex < quizData.length) {
+    setTimeout(loadQuestion, 3500);
+  } else {
+    setTimeout(() => {
+      result.innerHTML = `<span style="color:green;">🎯 Quiz completed! Thank you for participating.</span>`;
+      scoreEl.innerHTML = `Your Score: ${score} / ${quizData.length}`;
+      document.querySelector('.submit-btn').disabled = true;
+
+      // Show final message
+      document.getElementById('final-quote').style.display = 'block';
+    }, 3500);
+  }
+}
+
+loadQuestion();
+</script>
+
+
+
+<!--ABOUT US-->
+<section id="about"> 
+  
+        <!-- Internal CSS -->
+    <style>
+        /* Set body and html to take full height and center the content */
+        html, body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            height: 100%; /* Full height for both body and html */
+        }
+
+        .content {
+            flex: 1; /* Ensures content takes up the available space */
+            padding-bottom: 20px; /* Add padding at the bottom so content doesn’t overlap footer */
+        }
+
+        .about-us-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .about-us-content {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 800px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c6e2f;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #2c6e2f;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        section h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #555;
+        }
+    </style>
+
+
+<div class="content">
+<div class="about-us-container">
+<div class="about-us-content">
+<h1>About This Project</h1>
+
+
+<!-- ABOUT ME -->
+<section class="about-me">  
+<h2>About Me</h2>
+<p>Hello, I’m Huma Asrar Ansari, a BScIT student at Ramniranjan Jhunjhunwala College of Arts, Science & Commerce. I created this website as part of my field project on energy conservation. I’ve always been passionate about protecting the environment, and I believe that small changes in energy use can lead to significant global impact.</p>
+</section>
+
+
+<!-- PURPOSE -->
+<section class="project-purpose">
+<h2>Purpose of the Project</h2>
+<p>The goal of this project is to raise awareness about energy conservation and provide practical resources that individuals and businesses can use to reduce energy consumption. By promoting energy-saving tips, offering tools like our energy calculator, and testing knowledge through quizzes, we hope to inspire people to make more sustainable choices in their daily lives.</p>
+</section>
+
+
+<!-- IMPACT -->
+<section class="energy-impact">
+<h2>The Impact of Energy Conservation</h2>
+<p>Did you know that reducing energy consumption can significantly lower carbon footprints and help combat climate change? According to the U.S. Department of Energy, small efforts like improving home insulation, using energy-efficient appliances, and turning off lights when not in use can save hundreds of dollars annually. Our goal is to make energy conservation simple and actionable.</p>
+</section>
+
+
+<!-- PROJECT FEATURES -->
+<section class="project-features">
+<h2>Project Features</h2>
+<p>This website offers several tools and tips to help you save energy:</p>
+<ul>
+<li><strong>Energy Tips:</strong> Easy-to-follow suggestions to save energy at home or work.</li>
+<li><strong>Survey Form:</strong> Assess your energy usage and discover areas for improvement.</li>
+<li><strong>Energy Calculator:</strong> Calculate how much energy you can save by making specific changes.</li>
+<li><strong>Quiz:</strong> Test your knowledge on energy-saving practices.</li>
+</ul>
+</section>
+
+
+<!-- CONCLUSION -->
+<section class="conclusion">
+<h2>Conclusion</h2>
+<p>This project has been an incredible opportunity to learn more about energy conservation. 
+I hope this website helps you reduce energy consumption, save money, and contribute to a more sustainable planet.</p>
+</section>
+</div>
+</div>
+
+</div>
+</section>
+
+
+  <footer>
+&copy; 2025 EcoWise Initiative • Live Smart. Save Energy. 💡
+  </footer>
+
+</body>
+</html>
