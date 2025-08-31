@@ -10,6 +10,25 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Base styles for mobile */
+body {
+  font-size: 16px;
+}
+
+/* Tablet styles (min-width: 768px) */
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+/* Desktop styles (min-width: 1024px) */
+@media (min-width: 1024px) {
+  body {
+    font-size: 20px;
+  }
+}
+
 
 .quiz-box {
   background: #ffffff;
@@ -166,156 +185,17 @@ html {
       padding: 15px;
       margin-top: 40px;
     }
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EcoWise</title>
-  <style>
 
-    
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f0fff0;
-      color: #2f2f2f;
-    }
-
-    header {
-      background-color: #40916c;
-      color: white;
-      text-align: center;
-      padding: 20px 15px;
-    }
-
-    header h1 {
-      font-size: 2.2rem;
-      margin-bottom: 8px;
-    }
-
-    header p {
-      font-size: 1rem;
-    }
-
-    nav {
-      background-color: #d8f3dc;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-      padding: 10px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #2f6627;
-      font-weight: bold;
-      font-size: 1.1rem;
-    }
-
-    .main-content {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    .main-content h2 {
-      font-size: 2rem;
-      color: #2d6a4f;
-      margin-bottom: 15px;
-    }
-
-    .main-content p {
-      font-size: 1.1rem;
-      margin-bottom: 30px;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .button-group {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-    }
-
-    .button-group button {
-      background-color: #52b788;
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      border-radius: 6px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .button-group button:hover {
-      background-color: #40916c;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 1.8rem;
+    @media (max-width: 600px) {
+      .hero h2 {
+        font-size: 1.6rem;
       }
 
-      nav {
-        gap: 10px;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      nav a {
-        font-size: 1rem;
-      }
-
-      .main-content h2 {
-        font-size: 1.5rem;
-      }
-
-      .main-content p {
-        font-size: 1rem;
-        padding: 0 10px;
-      }
-
-      .button-group {
-        flex-direction: column;
-        gap: 12px;
-      }
-
-      .button-group button {
-        width: 90%;
-        max-width: 300px;
-        margin: 0 auto;
-      }
-    }
-
-    @media (max-width: 480px) {
-      header h1 {
-        font-size: 1.5rem;
-      }
-
-      header p {
-        font-size: 0.9rem;
-      }
-
-      nav a {
-        font-size: 0.95rem;
-      }
-
-      .main-content p {
+      .btn {
+        padding: 12px 20px;
         font-size: 0.95rem;
       }
     }
-   
   </style>
 </head>
 <body>
@@ -915,9 +795,3 @@ I hope this website helps you reduce energy consumption, save money, and contrib
 
 </body>
 </html>
-
-
-
-
-
-
