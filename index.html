@@ -185,17 +185,137 @@ body {
       padding: 15px;
       margin-top: 40px;
     }
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    @media (max-width: 600px) {
-      .hero h2 {
-        font-size: 1.6rem;
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0fff0;
+      color: #333;
+    }
+
+    header {
+      background-color: #40916c;
+      color: white;
+      padding: 20px 10px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 5px;
+    }
+
+    header p {
+      font-size: 1rem;
+    }
+
+    nav {
+      background-color: #d8f3dc;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 10px;
+    }
+
+    nav a {
+      margin: 10px 15px;
+      text-decoration: none;
+      color: #2f6627;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .main-content {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 30px 15px;
+      text-align: center;
+    }
+
+    .main-content h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #2d6a4f;
+    }
+
+    .main-content p {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+
+    .button-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .button-group button {
+      background-color: #52b788;
+      border: none;
+      color: white;
+      padding: 15px 25px;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .button-group button:hover {
+      background-color: #40916c;
+    }
+
+    /* Responsive Design */
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
       }
 
-      .btn {
-        padding: 12px 20px;
-        font-size: 0.95rem;
+      nav a {
+        font-size: 1rem;
+        margin: 8px;
+      }
+
+      .main-content h2 {
+        font-size: 1.5rem;
+      }
+
+      .main-content p {
+        font-size: 1rem;
+      }
+
+      .button-group {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .button-group button {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
       }
     }
+
+    @media (max-width: 480px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav a {
+        margin: 5px 0;
+      }
+
+      header p {
+        font-size: 0.9rem;
+      }
+    }
+   
   </style>
 </head>
 <body>
@@ -795,6 +915,7 @@ I hope this website helps you reduce energy consumption, save money, and contrib
 
 </body>
 </html>
+
 
 
 
