@@ -10,6 +10,26 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Base styles for mobile */
+body {
+  font-size: 16px;
+}
+
+/* Tablet styles (min-width: 768px) */
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+/* Desktop styles (min-width: 1024px) */
+@media (min-width: 1024px) {
+  body {
+    font-size: 20px;
+  }
+}
+
+
 .quiz-box {
   background: #ffffff;
   border-radius: 15px;
@@ -176,54 +196,6 @@ html {
         font-size: 0.95rem;
       }
     }
-    /* Default styles for desktop */
-body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  background-color: #f0fff0;
-}
-
-nav {
-  background-color: #d8f3dc;
-  padding: 10px 0;
-}
-
-nav a {
-  margin: 0 15px;
-  text-decoration: none;
-  color: #2f6627;
-  font-weight: bold;
-  font-size: 1.2em;
-}
-
-header {
-  background-color: #40916c;
-  padding: 20px 0;
-  color: white;
-}
-
-h1 {
-  font-size: 2.5em;
-  margin-bottom: 10px;
-}
-
-.container {
-  padding: 20px;
-}
-
-button {
-  background-color: #52b788;
-  border: none;
-  color: white;
-  padding: 15px 20px;
-  margin: 10px;
-  font-size: 1em;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
   </style>
 </head>
 <body>
@@ -823,6 +795,8 @@ I hope this website helps you reduce energy consumption, save money, and contrib
 
 </body>
 </html>
+
+
 
 
 
